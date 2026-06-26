@@ -147,7 +147,7 @@
       <% if @user && @user.is_moderator? && (hrc = HatRequest.count) > 0 %>
         <%= link_to "#{hrc} Hat Requests", hat_requests_path, class: 'mod' %>
       <% end %>
-      <%= link_to 'Filter', filters_path %>
+      <%= link_to "Filter (#{filtered_tags.size})", filters_path %>
       <%= link_to 'Moderation Log', moderations_path %>
     </nav>
   </footer>
